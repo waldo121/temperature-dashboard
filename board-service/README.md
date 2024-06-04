@@ -3,7 +3,6 @@
 
 ## Hardware
 
-<!-- TODO: Update this image -->
 ![hardware setup](docs/images/setup.jpg)
 
 
@@ -14,6 +13,10 @@ Components:
 - 1 x lcd1602 i2c
 - 1 x DS18B20 temperature sensor
     - DATA pin -> GPIO pin 4
+
+A second temperature sensor is used for 2 reasons:
+- The dht11 sensor is not always reliable. Sometimes it fails to provide accurate data.
+- Validating the data obtained.
 
 ## Raspberry pi configuration
 
@@ -27,7 +30,7 @@ sudo raspi-config
 
 ### DS18B20 sensor configuration
 
-1. Upgrade the kernel] 
+1. Upgrade the kernel
 ```sh
 sudo apt-get update
 sudo apt-get upgrade
